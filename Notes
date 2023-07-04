@@ -1,0 +1,62 @@
+Notes revision
+
+
+
+
+Elastic Search
+
+Elasticsearch is a highly scalable open-source search and analytics engine built on top of Apache Lucene. It is designed to provide fast, distributed, and real-time search capabilities. Elasticsearch is commonly used for full-text search, log analytics, and as a data store for various use cases.
+Here are some key features of Elasticsearch:
+1. Distributed and Scalable: Elasticsearch can be easily distributed across multiple nodes to handle large amounts of data and provide high availability.
+2. Near Real-time Search: It provides near real-time search capabilities, allowing you to index and search data almost instantly.
+3. Full-text Search: Elasticsearch supports powerful full-text search capabilities, including fuzzy matching, stemming, and multi-language support.
+4. Schema-less: You can index and search any kind of structured, unstructured, or semi-structured data without the need for a predefined schema.
+5. RESTful API: Elasticsearch provides a comprehensive RESTful API for indexing, searching, and managing data.
+6. Aggregations: It offers powerful aggregation capabilities to perform complex analytics, grouping, and statistical operations on data.
+7. Document-oriented: Elasticsearch stores data in JSON documents, making it flexible and easy to work with.
+8. Integration: It integrates well with various programming languages, frameworks, and data sources.
+To learn more about Elasticsearch, you can refer to the official documentation and resources:
+1. Official Elasticsearch documentation: https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
+2. Elasticsearch: The Definitive Guide: https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html
+3. Elasticsearch YouTube channel: https://www.youtube.com/c/Elasticsearch
+4. Elasticsearch GitHub repository: https://github.com/elastic/elasticsearch
+If you have any specific code-related questions about Elasticsearch, please provide more details, and I'll be happy to assist you.
+
+
+REDIS
+
+Redis is an open-source, in-memory data structure store that can be used as a database, cache, and message broker. It supports various data structures such as strings, hashes, lists, sets, sorted sets, and more. Redis is known for its high performance, scalability, and simplicity.
+Here are some useful links to learn more about Redis:
+1. Official Redis Website: https://redis.io/
+2. Redis Documentation: https://redis.io/documentation
+3. Redis Quick Start: https://redis.io/topics/quickstart
+4. Redis Commands: https://redis.io/commands
+5. Redis Data Types: https://redis.io/topics/data-types
+6. Redis Pub/Sub: https://redis.io/topics/pubsub
+7. Redis Cluster Tutorial: https://redis.io/topics/cluster-tutorial
+If you have any specific code-related questions about Redis, please let me know and I'll be happy to assist you!
+
+
+MongoDB
+
+MongoDB is a popular 
+open-source NoSQL database that provides high performance, scalability, and flexibility for managing large volumes of unstructured data. It uses a document-oriented data model, where data is stored in flexible, 
+JSON-like documents. MongoDB is known for its ease of use, automatic sharding for horizontal scalability, and support for ad-hoc queries.
+Here are some useful links to learn more about MongoDB:
+1. Official MongoDB website: https://www.mongodb.com/
+2. MongoDB Documentation: https://docs.mongodb.com/
+3. MongoDB University: https://university.mongodb.com/
+4. MongoDB GitHub repository: https://github.com/mongodb/mongo
+
+Storage Engine for MongoDB
+MongoDB has a pluggable storage engine architecture, which allows users to choose the storage engine that best suits their workload and performance requirements. The storage engine is responsible for managing the low-level data storage and retrieval operations in MongoDB.
+Here are some key points about MongoDB storage engines:
+1. WiredTiger: The default storage engine since MongoDB 3.2. It is optimized for both read and write-intensive workloads, providing a good balance of performance and storage efficiency. WiredTiger supports document-level concurrency control, compression, and advanced features like data compression and encryption.
+2. In-Memory: Introduced in MongoDB 3.2, this storage engine keeps all data in RAM. It is ideal for applications requiring extremely low latency and high throughput, but with the trade-off of limited data size due to memory constraints.
+3. MMAPv1: The original storage engine used in MongoDB, which has been deprecated since MongoDB 4.0. It uses memory-mapped files for data storage and provides good performance for read-heavy workloads. However, it lacks some advanced features like document-level concurrency control and compression.
+To learn more about MongoDB storage engines, you can refer to the official MongoDB documentation:
+1. Storage Engines: https://docs.mongodb.com/manual/core/storage-engines/
+2. WiredTiger Storage Engine: https://docs.mongodb.com/manual/core/wiredtiger/
+3. In-Memory Storage Engine: https://docs.mongodb.com/manual/core/inmemory/
+4. MMAPv1 Storage Engine: https://docs.mongodb.com/manual/core/mmapv1/
+Please note that providing actual code related to MongoDB storage engines is beyond the scope of this text-based conversation. However, the documentation links provided above contain detailed information on how to configure and work with each storage engine.
