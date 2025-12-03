@@ -8,8 +8,8 @@ We need to have Cassandra Db for analytics as well
 
 <img width="1629" height="605" alt="image" src="https://github.com/user-attachments/assets/6b5d5fbe-a698-436d-bc89-1739622d527f" />
 
+<img width="1628" height="847" alt="image" src="https://github.com/user-attachments/assets/8347a232-4838-4103-9049-afe18162304f" />
 
-<img width="1574" height="609" alt="image" src="https://github.com/user-attachments/assets/63ecf53a-a62c-419b-8ed8-65118b3e85d7" />
 
 
 <img width="1462" height="848" alt="image" src="https://github.com/user-attachments/assets/970bb1ca-3102-4a32-8e7a-3cdc062493c5" />
