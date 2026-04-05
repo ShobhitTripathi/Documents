@@ -72,11 +72,61 @@ summary of how we scaleour system to support millions of users:
 
 # CHAPTER 2: BACK-OF-THE-ENVELOPE ESTIMATION
 
+## Latency numbers every programmer should know
+<img width="1431" height="1375" alt="image" src="https://github.com/user-attachments/assets/dc2a78a2-20ad-4c62-a0e9-07cc0451af5e" />
+
+## Availaibility Numbers
+<img width="1266" height="642" alt="image" src="https://github.com/user-attachments/assets/030ee5b3-ceb8-444f-85be-0389b982958d" />
+
+## Example: Estimate Twitter QPS and storage requirements
 ```
 
+Please note the following numbers are for this exercise only as they are not real numbers
+from Twitter.
+
+Assumptions:
+• 300 million monthly active users.
+• 50% of users use Twitter daily.
+• Users post 2 tweets per day on average.
+• 10% of tweets contain media.
+• Data is stored for 5 years.
+
+Estimations:
+Query per second (QPS) estimate:
+• Daily active users (DAU) = 300 million * 50% = 150 million
+• Tweets QPS = 150 million * 2 tweets / 24 hour / 3600 seconds = ~3500
+• Peek QPS = 2 * QPS = ~7000
+
+We will only estimate media storage here.
+• Average tweet size:
+• tweet_id 64 bytes
+• text 140 bytes
+• media 1 MB
+• Media storage: 150 million * 2 * 10% * 1 MB = 30 TB per day
+• 5-year media storage: 30 TB * 365 * 5 = ~55 PB
+
 ```
 
+# CHAPTER 3: A FRAMEWORK FOR SYSTEM DESIGN INTERVIEWS
+
+```
+Step 1 - Understand the problem and establish design scope
+        Understand the problem thoroughly and clarify requirements with questions.
+
+Step 2 - Propose high-level design and get buy-in
+        Propose a high-level design collaboratively, drawing diagrams and performing quick calculations.
+
+Step 3 - Design deep dive
+        Deep dive into critical components, focusing on bottlenecks, performance, and scalability.
+
+Step 4 - Wrap up
+        Wrap up by discussing system bottlenecks, potential improvements, error handling, monitoring, and future scaling.
 
 
+Manage time effectively, allocating roughly 3-10 minutes for understanding,
+10-15 for high-level design, 10-25 for deep dive, and 3-5 for wrapping up.
+```
+
+# CHAPTER 4: DESIGN A RATE LIMITER
 
 
