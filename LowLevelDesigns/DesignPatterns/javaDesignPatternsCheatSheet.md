@@ -44,20 +44,33 @@ public class Singleton {
 ### 2. Factory Method
 
 ```java
+
 interface Shape {
     void draw();
 }
 
 class Circle implements Shape {
-    public void draw() { System.out.println("Circle"); }
-}
-
-class ShapeFactory {
-    public Shape getShape(String type) {
-        if (type.equals("circle")) return new Circle();
-        return null;
+    public void draw() {
+        System.out.println("Circle");
     }
 }
+
+abstract class ShapeCreator {
+    abstract Shape createShape(); // Factory Method
+
+    public void render() {
+        Shape shape = createShape();
+        shape.draw();
+    }
+}
+
+class CircleCreator extends ShapeCreator {
+    @Override
+    Shape createShape() {
+        return new Circle();
+    }
+}
+
 ```
 
 ---
