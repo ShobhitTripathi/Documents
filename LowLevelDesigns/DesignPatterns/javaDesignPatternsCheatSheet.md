@@ -45,31 +45,52 @@ public class Singleton {
 
 ```java
 
-interface Shape {
-    void draw();
-}
+public class ShapeFactoryDemo {
 
-class Circle implements Shape {
-    public void draw() {
-        System.out.println("Circle");
+    // 1. Product Interface
+    interface Shape {
+        void draw();
+    }
+
+    // 2. Concrete Products
+    static class Circle implements Shape {
+        @Override
+        public void draw() {
+            System.out.println("Drawing a Circle");
+        }
+    }
+
+    static class Square implements Shape {
+        @Override
+        public void draw() {
+            System.out.println("Drawing a Square");
+        }
+    }
+
+    // 3. The Factory Class
+    static class ShapeFactory {
+        public Shape getShape(String type) {
+            if (type == null) return null;
+            if (type.equalsIgnoreCase("CIRCLE")) return new Circle();
+            if (type.equalsIgnoreCase("SQUARE")) return new Square();
+            return null;
+        }
+    }
+
+    // 4. Client Code (Main Method)
+    public static void main(String[] args) {
+        ShapeFactory factory = new ShapeFactory();
+
+        // Get a Circle and call its draw method
+        Shape shape1 = factory.getShape("CIRCLE");
+        shape1.draw();
+
+        // Get a Square and call its draw method
+        Shape shape2 = factory.getShape("SQUARE");
+        shape2.draw();
     }
 }
 
-abstract class ShapeCreator {
-    abstract Shape createShape(); // Factory Method
-
-    public void render() {
-        Shape shape = createShape();
-        shape.draw();
-    }
-}
-
-class CircleCreator extends ShapeCreator {
-    @Override
-    Shape createShape() {
-        return new Circle();
-    }
-}
 
 ```
 
